@@ -3,26 +3,26 @@
   <p>
     {{ notificacao }}
   </p>
-  <label>Nome</label><br>
-  <input name="nome" v-model="cliente.nome"/><br>
+  <label>Nome</label>
+  <input name="nome" v-model="cliente.nome"/>
 
-  <label>E-mail</label><br>
-  <input name="email" v-model="cliente.email"/><br>
+  <label>E-mail</label>
+  <input name="email" v-model="cliente.email"/>
 
-  <label>CPF</label><br>
-  <input name="cpf" v-model="cliente.cpf"/><br>
+  <label>CPF</label>
+  <input name="cpf" v-model="cliente.cpf"/>
 
-  <label>CEP</label><br>
-  <input name="cep" v-model="cliente.cep" v-on:blur="buscarCep()"/><br>
+  <label>CEP</label>
+  <input name="cep" v-model="cliente.cep" v-on:blur="buscarCep()"/>
 
-  <label>Endereco</label><br>
-  <input name="endereco" v-model="cliente.endereco"/><br>
+  <label>Endereco</label>
+  <input name="endereco" v-model="cliente.endereco"/>
 
-  <label>UF</label><br>
-  <input name="uf" v-model="cliente.uf"/><br>
+  <label>UF</label>
+  <input name="uf" v-model="cliente.uf"/>
 
-  <label>Complemento</label><br>
-  <input name="complemento" v-model="cliente.complemento"/><br>
+  <label>Complemento</label>
+  <input name="complemento" v-model="cliente.complemento"/>
 
   <button @click="cadastrar()">Cadastrar</button>
 </template>
