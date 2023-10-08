@@ -1,9 +1,13 @@
 import express from 'express'
 import cors from 'cors'
-import {cadastrarCliente} from "./services/ClienteService.js"
-import {listarClientes} from "./services/ClienteService.js"
-import {cadastrarFornecedor} from "./services/FornecedorService.js"
-
+import {
+  cadastrarCliente, 
+  listarClientes
+} from './services/ClienteService.js'
+import {
+  cadastrarFornecedor,
+  listarFornecedores
+} from "./services/FornecedorService.js"
 
 const app = express()
 const porta = 3000
@@ -14,7 +18,7 @@ app.use(express.json())
 app.post('/cliente/cadastrar', async function (request, responce) {
   const cliente = request.body
   const result = await cadastrarCliente(cliente)
-    responce.json(result)
+  responce.json(result)
 })
 
 app.get('/cliente', async function (request, responce) {
@@ -28,5 +32,10 @@ app.post('/fornecedor/cadastrar', async function (request, responce) {
     responce.json(result)
 })
 
-console.log(`Servidor up http://localhost:${porta}`);
+app.get('/fornecedor', async function (request, responce) {
+  const fornecedores = await listarFornecedores()
+  responce.json(fornecedores)
+})
+
+console.log(`Servidor UP http://localhost:${porta}`);
 app.listen(porta)

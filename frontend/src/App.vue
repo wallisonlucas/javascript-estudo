@@ -7,11 +7,10 @@
     <ListarCliente />
   </div>
 
-  <!--
-    <div style="width: 25%; float: left;">
+  <div style="width: 25%; float: left;">
     <CadastrarFornecedor />
   </div>
--->
+
 </template>
 
 <script setup>
